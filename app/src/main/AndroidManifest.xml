@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nith.appteam.nimbus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <application
+        android:name=".Utils.MyApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/nimbuslogo"
+        android:label = "@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:supportsRtl"
+        >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyByIUspPrtzSN1TGWXi2zXn7zaeTGr6850" />
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
+        <activity android:name=".Activity.TeamEventActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+            android:screenOrientation="portrait"
+            tools:replace="screenOrientation"
+
+            />
+        <activity
+            android:name=".Activity.NewsFeedActivity"
+            android:label="Wall"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.WallIntroActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.MainActivity"
+            android:theme="@style/HomeTheme"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".Activity.CoreTeamActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity android:name=".Activity.ContestantActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.EventsList"
+            />
+        <activity android:name=".Activity.EventsList"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.TeamActivity"
+            />
+        <activity android:name=".Activity.CreateTeam"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Activity.JoinTeam"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".Activity.Workshops"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AppIntro"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_appintro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.UploadNewsFeedActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".Activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.Splash"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.TeamActivity"
+            android:label="@string/title_activity_team"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.MainActivity"
+            android:theme="@style/ProfileTheme" />
+        <activity
+            android:name=".Activity.LeaderBoardActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.QuizActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activity.WorkshopDetail"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.Workshops" />
+
+        <service
+            android:name=".Service.UploadService"
+            android:exported="false" />
+
+        <receiver android:name=".Service.UploadBroadCastReceiver">
+            <intent-filter>
+                <action android:name="start" />
+                <action android:name="finish" />
+                <action android:name="error" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="CLOUDINARY_URL"
+            android:value="cloudinary://862148829278388:hJQPvA-kYbt8TRsp0bMSdqH65NE@appteamnith" />
+
+        <activity android:name=".Activity.MapActivity"
+            android:screenOrientation="portrait"
+
+            />
+        <activity
+            android:name=".Activity.QuizActivity"
+            android:screenOrientation="portrait"
+            android:label="Quiz"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Activity.HomescreenNew"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity"
+                />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.GalleryDetailActivity" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.GalleryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Notification.NotificationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Notification.Notification2"
+            android:parentActivityName=".Notification.NotificationActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.ContributorsActivity"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.QuizQuestionActivity"
+            android:label="Quiz">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.QuizActivity" />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.QuizScoreActivity"
+            android:label="Quiz">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.QuizActivity" />
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.InformationActivity"
+            android:label="Instruction">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.QuizActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SponsorActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_sponsor"
+            android:parentActivityName=".Activity.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.CoreTeamEventActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.WallIntroActivity"
+            android:screenOrientation="portrait"
+            android:label="Wall"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nith.appteam.nimbus.Activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Activity.SlidingImageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".Activity.FirebaseLoginActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Activity.ProfileActivityEdit"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:parentActivityName=".Activity.ProfileActivity" />
+        <activity
+            android:name=".Activity.NewsfeedTry"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.SponsorActivityTry" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.EventActivityTry" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.RegisterEvent"
+            android:parentActivityName=".Activity.TeamEventActivity"
+            />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.HomescreenNew">
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.FirebaseAuth" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.GalleryNew" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Adapter.NewGalleryAdapter" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Activity.ShowImage" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Adapter.ImageAdapter" />
+        <activity
+            android:screenOrientation="portrait"
+
+            android:name=".Adapter.TeamsNew" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.ProfileNew"
+            >
+        </activity>
+        <activity
+            android:name=".Activity.Events"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".Activity.TeamActivity"
+            />
+        <activity android:name=".Activity.EventsList"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".Activity.TeamActivity"
+            />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Adapter.EventsListAdapter" />
+        <activity            android:screenOrientation="portrait"
+            android:name=".Activity.QuizActivityNew" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Activity.QuizCategory" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Adapter.QuizAdapter" />
+        <activity            android:screenOrientation="portrait"
+            android:name=".Activity.QuizResultActivity" >
+
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".Activity.QuizCategoryNew"
+            android:parentActivityName=".Activity.MainActivity"></activity>
+        <activity             android:screenOrientation="portrait"
+            android:name=".Adapter.QuizAllAdapter" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Activity.CustomDialog" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Activity.JoinTeam" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Activity.Scannerqr" />
+        <activity             android:screenOrientation="portrait"
+            android:name=".Activity.ShowProfile"></activity>
+    </application>
+
+</manifest>

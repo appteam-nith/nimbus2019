@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nith.appteam.nimbus.Activity.CustomDialog"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d0000000"
+    >
+    <android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        android:layout_centerVertical="true"
+        app:cardUseCompatPadding="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Not attempted all questions"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:id="@+id/state"
+                />
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="Do you want to exit?"
+            android:textColor="#000"
+            android:textSize="17sp"
+                android:layout_marginTop="1dp"
+                android:layout_below="@id/state"
+            android:id="@+id/exit"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:layout_marginRight="64dp"
+            android:text="No"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:id="@+id/no"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="16dp"
+                android:text="Yes"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:textColor="#000"
+                android:textSize="16sp"
+                android:id="@+id/yes"
+                />
+        </RelativeLayout>
+</android.support.v7.widget.CardView>
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

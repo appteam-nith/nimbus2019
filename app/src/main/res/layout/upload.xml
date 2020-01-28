@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="3dp"
+        >
+        <com.nith.appteam.nimbus.CustomView.EditorView
+            android:id="@+id/editor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+            <!--<ImageView-->
+                <!--android:id="@+id/select_image"-->
+                <!--android:layout_width="32dp"-->
+                <!--android:layout_height="32dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="64dp"-->
+                <!--android:src="@drawable/camera"-->
+                <!--android:tint="@color/colorPrimary"-->
+                <!--/>-->
+            <!--<ImageView-->
+                <!--android:id="@+id/upload_news"-->
+                <!--android:layout_width="32dp"-->
+                <!--android:layout_height="32dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:tint="@color/colorPrimary"-->
+                <!--android:src="@drawable/message" />-->
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

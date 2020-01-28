@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nith.appteam.nimbus.Activity.CreateTeam">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/curve_toolbar_bg"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="216dp"
+        android:text="Create a New Team"
+        android:textSize="20sp"
+        android:id="@+id/createTeam"
+        android:textColor="#000"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/createTeam"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:id="@+id/teamName"
+        android:paddingBottom="12dp"
+        android:background="@drawable/profile_background"
+        android:layout_marginTop="80dp"
+        android:textColor="#000"
+        android:hint="Team Name"
+        android:textColorHint="#bdbdbd"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/teamName"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="16sp"
+        android:paddingTop="12dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:id="@+id/password"
+        android:paddingBottom="12dp"
+        android:background="@drawable/profile_background"
+        android:layout_marginTop="16dp"
+        android:textColor="#000"
+        android:hint="Password"
+        android:textColorHint="#bdbdbd"
+        />
+    <TextView
+        android:id="@+id/create_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_below="@id/password"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:background="@drawable/login_button"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="Create Team"
+        android:gravity="center"
+        android:textColor="#fff" />
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/password"
+        android:id="@+id/progressBar"
+        android:layout_marginTop="36dp"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

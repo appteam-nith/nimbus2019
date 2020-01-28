@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:custom="http://schemas.android.com/apk/res-auto/com.nith.appteam.nimbus.CustomView.AspectRatioImageView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="8dp"
+        android:layout_height="match_parent">
+
+    <com.nith.appteam.nimbus.CustomView.AspectRatioImageView
+        android:scaleType="fitXY"
+        custom:dominantMeasurement="width"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/slide_4"
+        android:id="@+id/image"/>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
