@@ -1,25 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nith.appteam.nimbus.Activity.Splash"
-    android:background="#fff"
-    >
-<!--<ImageView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:scaleType="centerCrop"-->
-    <!--android:src="@drawable/splash"-->
-    <!--android:id="@+id/image_splash"-->
-    <!--android:tint="#f5b7b2"-->
-    <!--/>-->
-    <!---->
+    android:layout_width="match_parent">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="SKIP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/logo_b_t"
-        android:id="@+id/image_splash"
-        />
+        android:id="@+id/logo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        app:srcCompat="@drawable/logo_b_t"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="-72dp"
+        android:text="Hi! There"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/Intro"
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/hello"
+        android:layout_marginBottom="-89dp"
+        android:text="Welcome to the Nimbus App. Stay tuned with feeds, games and many more..."
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_marginLeft="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Intro"
+        android:layout_marginBottom="-29dp"
+        android:text="Sign in to Continue"
+        android:textSize="25dp" />
 </RelativeLayout>
